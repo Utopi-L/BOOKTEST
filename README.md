@@ -5,7 +5,7 @@ Welcome to My Awesome Project! This project is proudly sponsored by [JetBrains](
 
 ## JetBrains Sponsorship
 
-[![JetBrains Logo](jetbrains-logo-CFBA1D6854-seeklogo.com.png)
+![JetBrains Logo](jetbrains-logo-CFBA1D6854-seeklogo.com.png)
 
 We are grateful to JetBrains for supporting our development efforts. Their tools, including IntelliJ IDEA, PyCharm, and PhpStorm, have greatly contributed to the success of our project.
 
