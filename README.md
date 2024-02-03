@@ -1,4 +1,31 @@
 # BOOKTEST
+# My Awesome Project
+
+Welcome to My Awesome Project! This project is proudly sponsored by [JetBrains](https://www.jetbrains.com/), the creators of powerful development tools.
+
+## JetBrains Sponsorship
+
+[![JetBrains Logo](jetbrains_logo.png)](https://www.jetbrains.com/)
+
+We are grateful to JetBrains for supporting our development efforts. Their tools, including IntelliJ IDEA, PyCharm, and PhpStorm, have greatly contributed to the success of our project.
+
+### Why JetBrains?
+
+[JetBrains](https://www.jetbrains.com/) offers a suite of development tools that enhance productivity and provide a seamless coding experience. Here are some reasons why we love JetBrains:
+
+- **Intelligent Code Assistance**: Smart code completion, code analysis, and other features help us write better code faster.
+- **Cross-Language Support**: JetBrains IDEs support multiple programming languages, making them versatile for various projects.
+- **Great User Interface**: The clean and intuitive UI of JetBrains IDEs improves our overall development experience.
+
+## How to Get Started
+
+To get started with JetBrains tools, visit their [official website](https://www.jetbrains.com/) and explore the wide range of products available.
+
+---
+
+**Note**: The above content is for illustrative purposes, and you should replace the placeholders with your specific information.
+
+
 # Daily Book Information Maintenance
 
 Welcome to the Daily Book Information Maintenance repository! This project aims to facilitate the organization and maintenance of information related to daily reading materials. Whether you're a book enthusiast, librarian, or someone passionate about sharing literary knowledge, this repository provides a platform for collaboration.
