@@ -1,0 +1,3 @@
+jQuery(document).ready(function($){var ppp=12;var pageNumber=1;function load_posts(){pageNumber++;var str='&pageNumber='+pageNumber+'&ppp='+ppp+'&action=random_post_ajax';$.ajax({type:"POST",dataType:"html",url:ajax_posts.ajaxurl,data:str,success:function(data){var $data=$(data);if($data.length){$("#ajax-posts").html($data);$("#random_posts").addClass('posts_loading');}else{$("#random_posts").removeClass('posts_loading').addClass('no_more_posts');}
+$("#random_posts").removeAttr("disabled");},error:function(jqXHR,textStatus,errorThrown){$loader.html(jqXHR+" :: "+textStatus+" :: "+errorThrown);$("#random_posts").removeAttr("disabled");}});return false;}
+$("#random_posts").on("click",function(){$("#random_posts").attr("disabled",true);load_posts();});});
