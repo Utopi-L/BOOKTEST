@@ -50,11 +50,11 @@ if __name__ == "__main__":
         acc_test = accuracy_score(y_test, y_test_pred)
         print('特征：', iris_feature[pair[0]], ' + ', iris_feature[pair[1]])
         print('\t训练集准确率: %.4f%%' % (100*acc_train))
-        print('\t测试集准确率: %.4f%%\n' % (100*acc_test))s
+        print('\t测试集准确率: %.4f%%\n' % (100*acc_test))
 
         cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
         cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
-        y_hat = model.predict(x_show
+        y_hat = model.predict(x_show)
         y_hat = y_hat.reshape(x1.shape)
         plt.subplot(2, 3, i+1)
         plt.contour(x1, x2, y_hat, colors='k', levels=[0, 1], antialiased=True, linewidths=1)
