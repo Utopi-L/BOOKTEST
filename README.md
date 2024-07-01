@@ -23,7 +23,7 @@ To get started with JetBrains tools, visit their [official website](https://www.
 
 ---
 
-**Note**: The above content is for illustrative purposes, and you should replace the placeholders with your specific information.
+
 
 
 # Daily Book Information Maintenance
