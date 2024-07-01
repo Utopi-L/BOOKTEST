@@ -32,11 +32,19 @@ Welcome to the Daily Book Information Maintenance repository! This project aims 
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
+- [BOOKTEST](#booktest)
+- [My Awesome Project](#my-awesome-project)
+  - [JetBrains Sponsorship](#jetbrains-sponsorship)
+    - [Why JetBrains?](#why-jetbrains)
+  - [How to Get Started](#how-to-get-started)
+- [Daily Book Information Maintenance](#daily-book-information-maintenance)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Code of Conduct](#code-of-conduct)
+  - [License](#license)
 
 ## Introduction
 
@@ -86,6 +94,8 @@ Follow these steps to get started with contributing to the Daily Book Informatio
 ## Contribution Guidelines
 
 We welcome contributions from the community! Please review our [Contribution Guidelines](CONTRIBUTING.md) for detailed information on how to contribute to this project.
+## Code of Conduct
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
