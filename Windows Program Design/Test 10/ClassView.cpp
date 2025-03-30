@@ -1,5 +1,5 @@
 ﻿
-// #include "pch.h"
+#include "pch.h"
 #include "framework.h"
 #include "MainFrm.h"
 #include "ClassView.h"
