@@ -151,8 +151,14 @@ BEGIN_MESSAGE_MAP(COutputList, CListBox)
 	ON_COMMAND(ID_VIEW_OUTPUTWND, OnViewOutput)
 	ON_WM_WINDOWPOSCHANGING()
 END_MESSAGE_MAP()
+
 /////////////////////////////////////////////////////////////////////////////
 // COutputList 消息处理程序
+
+void COutputList::OnWindowPosChanging(WINDOWPOS* lpwndpos)
+{
+	CListBox::OnWindowPosChanging(lpwndpos);
+}
 
 void COutputList::OnContextMenu(CWnd* /*pWnd*/, CPoint point)
 {
@@ -177,12 +183,39 @@ void COutputList::OnContextMenu(CWnd* /*pWnd*/, CPoint point)
 
 void COutputList::OnEditCopy()
 {
-	MessageBox(_T("复制输出"));
+	int nSel = GetCurSel();
+	if (nSel != LB_ERR)
+	{
+		CString strText;
+		GetText(nSel, strText);
+		
+		if (OpenClipboard())
+		{
+			EmptyClipboard();
+			HGLOBAL hGlobal = GlobalAlloc(GMEM_MOVEABLE, (strText.GetLength() + 1) * sizeof(TCHAR));
+			if (hGlobal)
+			{
+				LPTSTR lpszData = (LPTSTR)GlobalLock(hGlobal);
+				_tcscpy_s(lpszData, strText.GetLength() + 1, strText);
+				GlobalUnlock(hGlobal);
+				
+#ifdef UNICODE
+				SetClipboardData(CF_UNICODETEXT, hGlobal);
+#else
+				SetClipboardData(CF_TEXT, hGlobal);
+#endif
+			}
+			CloseClipboard();
+		}
+	}
 }
 
 void COutputList::OnEditClear()
 {
-	MessageBox(_T("清除输出"));
+	if (MessageBox(_T("确定要清除所有输出内容吗？"), _T("确认"), MB_YESNO | MB_ICONQUESTION) == IDYES)
+	{
+		ResetContent();
+	}
 }
 
 void COutputList::OnViewOutput()
@@ -192,9 +225,9 @@ void COutputList::OnViewOutput()
 
 	if (pMainFrame != nullptr && pParentBar != nullptr)
 	{
-		pMainFrame->SetFocus();
-		pMainFrame->ShowPane(pParentBar, FALSE, FALSE, FALSE);
+		// 确保面板可见并激活
+		pMainFrame->ShowPane(pParentBar, TRUE, FALSE, TRUE);
+		pParentBar->SetFocus();
 		pMainFrame->RecalcLayout();
-
 	}
 }
